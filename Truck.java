@@ -13,7 +13,7 @@ import java.util.List;
 * @since 2022-05-20
 */
 
-public class Truck extends Vehicle {
+public class Truck extends AbstractVehicle {
     /**
     * License plate property.
     */

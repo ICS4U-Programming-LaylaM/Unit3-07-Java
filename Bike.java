@@ -13,7 +13,7 @@ import java.util.List;
 * @since 2022-05-20
 */
 
-public class Bike extends Vehicle {
+public class Bike extends AbstractVehicle {
     /**
     * Number of wheels property.
     */

@@ -346,82 +346,8 @@ final class Main {
                 // Get the bike's information
                 aBike.getInfo();
             } else {
-                for (int counter2 = 0; counter2 < list.size(); counter2++) {
-                    if (counter2 == VEHICLE_NUM_INDEX) {
-                        try {
-                            // Check if the vehicle number is an integer
-                            Integer.parseInt(list.toArray(
-                                new String[0])[counter2]);
-                        } catch (NumberFormatException exception) {
-                            // Set the vehicle number value to null if
-                            // the input is invalid
-                            list.set(counter2, STRING_NULL);
-                        }
-                    } else if (counter2 == LICENSE_INDEX) {
-                        // Check if a license plate was written
-                        if (list.toArray(new String[0])
-                            [counter2] == null) {
-                            // Set the license plate to XXX XXX
-                            // if the field is empty
-                            list.set(counter2, "XXX XXX");
-                        }
-                    } else if (counter2 == DOORS_NUM_INDEX) {
-                        try {
-                            // Check if the number of doors is an integer
-                            Integer.parseInt(list.toArray(
-                                new String[0])[counter2]);
-                        } catch (NumberFormatException exception) {
-                            // Set the door number value to "0"
-                            // if the input is invalid
-                            list.set(counter2, STRING_ZERO);
-                        }
-                    } else if (counter2 == SPEED_INDEX) {
-                        try {
-                            // Check if the speed is an integer
-                            Integer.parseInt(list.toArray(
-                                new String[0])[counter2]);
-                        } catch (NumberFormatException exception) {
-                            // Set the speed value to "0"
-                            // if the input is invalid
-                            list.set(counter2, STRING_ZERO);
-                        }
-                    } else if (counter2 == MAX_SPEED_INDEX) {
-                        try {
-                            // Check if the max speed is an integer
-                            Integer.parseInt(list.toArray(
-                                new String[0])[counter2]);
-                        } catch (NumberFormatException exception) {
-                            // Set the max speed value to "0"
-                            // if the input is invalid
-                            list.set(counter2, STRING_ZERO);
-                        }
-                    }
-                }
-
-                // Create aVehicle object containing the information
-                // of each string
-                final Vehicle aVehicle = new Vehicle(
-                    list.toArray(new String[0])[VEHICLE_NUM_INDEX],
-                    list.toArray(new String[0])[LICENSE_INDEX],
-                    list.toArray(new String[0])[COLOUR_INDEX],
-                    list.toArray(new String[0])[DOORS_NUM_INDEX],
-                    list.toArray(new String[0])[SPEED_INDEX],
-                    list.toArray(new String[0])[MAX_SPEED_INDEX]);
-
-                // Get the current speed of the vehicle
-                aVehicle.getSpeed();
-
-                // Get the max speed of the vehicle
-                aVehicle.getMaxSpeed();
-
-                // Accelerate the vehicle by 10 km/h
-                aVehicle.accelerate(STRING_TEN);
-
-                // Deceleration the vehicle by 10 km/h
-                aVehicle.brake(STRING_FIVE);
-
-                // Get the vehicle's information
-                aVehicle.getInfo();
+                // Message if the vehicle is not a truck or bike
+                System.out.println("Please enter a valid vehicle.");
             }
         }
     }
